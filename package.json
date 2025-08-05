@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "rm -rf _public && cp -R static _public && esbuild src/main.js --bundle --minify --outdir=_public/assets"
+    "build": "rm -rf _public && cp -R static _public && esbuild src/main.js --bundle --minify --outdir=_public/assets",
+    "serve": "python3 -m http.server -b localhost -d _public 9999"
   },
   "dependencies": {
     "mithril": "^2.3.3"

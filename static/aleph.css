@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+}
+
+main {
+  width: 60rem;
+  margin: 0 auto;
+}
+
+.terminal {
+  margin-top: 20px;
+  background: #1e1e1e;
+  color: #e0e0e0;
+  font:1rem/1.5 "Fira Code", monospace;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  color-scheme: dark; /* dark scrollbars in supporting browsers */
+}
+
+.terminal .entry {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  column-gap: 7px;
+}
+
+.terminal.finished .entry {
+  opacity: 75%;
+}
+
+.terminal input {
+  flex-grow: 1;
+}
+
+.terminal input,
+.terminal textarea {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: .5rem .75rem;
+  margin: .5rem 0;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  caret-color: #00caff;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.terminal textarea {
+  width: 100%;
+  resize: none;
+}
+
+.terminal input:focus-visible,
+.terminal textarea:focus-visible {
+  border-color: #00caff;
+  box-shadow: 0 0 0 3px rgba(0,202,255,.35);
+}
+
+/* placeholder text */
+.terminal input::placeholder,
+.terminal textarea::placeholder {
+  color: #777;
+}
+
+.terminal.pending textarea {
+  display: none;
+}
