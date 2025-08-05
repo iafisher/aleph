@@ -1,8 +1,11 @@
 {
   "scripts": {
-    "build": "rm -rf public && cp -R static public && esbuild src/main.js --bundle --minify --outdir=public/assets"
+    "build": "rm -rf _public && cp -R static _public && esbuild src/main.js --bundle --minify --outdir=_public/assets"
   },
   "dependencies": {
+    "mithril": "^2.3.3"
+  },
+  "devDependencies": {
     "esbuild": "^0.25.8"
   }
 }
