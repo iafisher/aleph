@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "rm -rf public && cp -R static public && esbuild src/main.js --bundle --minify --outdir=public/assets"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.8"
+  }
+}
